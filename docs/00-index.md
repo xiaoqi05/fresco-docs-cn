@@ -29,8 +29,8 @@ Fresco.initialize(context);
 ```xml
 <com.facebook.drawee.view.SimpleDraweeView
     android:id="@+id/my_image_view"
-    android:layout_width="20dp"
-    android:layout_height="20dp"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
     fresco:placeholderImage="@drawable/my_drawable"
   />
 ```
@@ -38,7 +38,8 @@ Fresco.initialize(context);
 开始加载图片
 
 ```java
-draweeView.setImageURI("http://site.com/uri");
+SimpleDraweeView draweeView = (SimpleDraweeView) findViewById(R.id.my_image_view);
+draweeView.setImageURI(Uri.parse("http://e.hiphotos.baidu.com/image/pic/item/7aec54e736d12f2ea5aafea54ec2d56284356843.jpg"));
 ```
 
 剩下的，Fresco会替你完成: 
